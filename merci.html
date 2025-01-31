@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci pour votre achat !</title>
+    <style>
+        :root {
+            --primary-color: #2A5C82;
+            --secondary-color: #F4B41B;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+        }
+
+        .checkmark i {
+            color: white;
+            font-size: 3rem;
+        }
+
+        .download-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+
+        .email-form {
+            margin: 2rem 0;
+        }
+
+        input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            max-width: 400px;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #1a3a57;
+        }
+
+        .gdpr-text {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="checkmark">
+            <i class="fas fa-check"></i>
+        </div>
+        
+        <h1>Merci pour votre achat ! 🎉</h1>
+        <p>Votre paiement a bien été reçu. Un email de confirmation vous a été envoyé.</p>
+
+        <div class="download-box">
+            <h2>Téléchargez votre ebook</h2>
+            <div class="email-form">
+                <p>Entrez votre email pour recevoir le lien de téléchargement :</p>
+                <form id="downloadForm" action="VOTRE_URL_DE_TRAITEMENT" method="POST">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="votre@email.com" required>
+                    <div class="gdpr-text">
+                        <label>
+                            <input type="checkbox" required> 
+                            J'accepte de recevoir des conseils professionnels occasionnels (désinscription possible à tout moment)
+                        </label>
+                    </div>
+                    <button type="submit">
+                        <i class="fas fa-download"></i> Envoyer le lien
+                    </button>
+                </form>
+            </div>
+
+            <div id="downloadInstructions" style="display: none;">
+                <h3>📩 C'est presque fini !</h3>
+                <p>Nous venons d'envoyer le lien de téléchargement à votre adresse email.</p>
+                <p>Vérifiez votre dossier spam si vous ne voyez pas notre message.</p>
+            </div>
+        </div>
+
+        <div class="support">
+            <p>Besoin d'aide ? Contactez-nous à <a href="mailto:support@votreentreprise.com">support@votreentreprise.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Simulation d'envoi de formulaire
+        document.getElementById('downloadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Cacher le formulaire
+            this.style.display = 'none';
+            
+            // Afficher les instructions
+            document.getElementById('downloadInstructions').style.display = 'block';
+            
+            // Redirection facultative vers le fichier
+            // window.location.href = 'URL_DE_VOTRE_EBOOK.pdf';
+        });
+    </script>
+</body>
+</html>

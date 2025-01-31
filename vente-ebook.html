@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebook Professionnel | Nom du Produit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A5C82;
+            --secondary-color: #F4B41B;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(45deg, var(--primary-color), #1a3a57);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .book-cover {
+            max-width: 250px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Section principale */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s;
+            margin: 2rem 0;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Caractéristiques */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Témoignages */
+        .testimonials {
+            background: #f5f5f5;
+            padding: 4rem 2rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Maîtrisez [Votre Sujet] avec Notre Ebook Professionnel</h1>
+        <img src="placeholder-cover.jpg" alt="Couverture de l'ebook" class="book-cover">
+        <h2>Transformez votre carrière dès aujourd'hui</h2>
+        <a href="#offer" class="cta-button">Acheter Maintenant (49€)</a>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <div class="feature-item">
+                <i class="fas fa-certificate"></i>
+                <h3>Expertise Professionnelle</h3>
+                <p>Contenu validé par des experts du secteur</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-download"></i>
+                <h3>Téléchargement Immédiat</h3>
+                <p>Reçevrez votre ebook instantanément après paiement</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lock"></i>
+                <h3>Paiement Sécurisé</h3>
+                <p>Transaction 100% sécurisée via SSL</p>
+            </div>
+        </section>
+
+        <section id="offer">
+            <h2>Ce Que Vous Allez Découvrir :</h2>
+            <ul>
+                <li>✔️ [Bénéfice 1]</li>
+                <li>✔️ [Bénéfice 2]</li>
+                <li>✔️ [Bénéfice 3]</li>
+            </ul>
+        </section>
+
+        <section class="testimonials">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Témoignages</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"Cet ebook a transformé ma manière de travailler..."</p>
+                    <p>- Jean D., Chef de Projet</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Une ressource indispensable pour tout professionnel..."</p>
+                    <p>- Marie L., Consultante</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Nom de Votre Entreprise | <a href="#" style="color: white;">Mentions légales</a></p>
+    </footer>
+</body>
+</html>
